@@ -22,4 +22,14 @@ public class InMemoryAccountService implements AccountService{
     public List<Account> findAllAccount(){
         return _dao.findAllAccount();
     }
+
+    @Override
+    public Account findByEmail(String email) {
+        return _dao.findByEmail(String.valueOf(email));
+    }
+
+    @Override
+    public Account update(Account a) {
+        return _dao.update(a);
+    }
 }

@@ -28,4 +28,18 @@ public class AccountController {
     public  List<Account> findAllAccounts(){
         return service.findAllAccount();
     }
+
+    @GetMapping("/{email}")
+    public Account findByEmail(
+          @PathVariable("email")  String email
+    ){
+        return  service.findByEmail(email);
+    }
+
+    @PutMapping
+    public Account updateAccount(
+           @RequestBody Account account
+    ){
+        return service.update(account);
+    }
 }

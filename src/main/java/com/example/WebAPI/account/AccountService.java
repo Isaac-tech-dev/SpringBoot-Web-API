@@ -11,4 +11,7 @@ public interface AccountService {
 
     List<Account> findAllAccount();
 
+    Account findByEmail (String email);
+    Account update(Account a);
+
 }
